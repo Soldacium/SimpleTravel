@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@300;400;500;700;900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    font-size: 1.5rem;
+}
+
+li,
+label,
+input,
+p {
+    font-size: 1rem;
+    list-style: none;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+h4 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem;
+    background-color: rgb(46, 154, 255);
+    border: none;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color:rgb(0, 104, 201);
+}
+
+/*** NAV ***/
+
+.head{
+    background-color: rgb(0, 16, 39);
+    color: white;
+}
+
+nav{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    min-height: 10vh;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+nav ul{
+    display: flex;
+    flex: 2 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+#logo{
+    
+    flex: 1 1 40rem;
+    font-family: 'Pattaya',sans-serif;
+}
+
+
+/*section 1*/
+.hero{
+    min-height: 90vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.253),transparent), url('img/landing-page.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h3{
+    padding: 3rem;
+}
+
+@media screen and (max-width: 930px){
+    nav{
+        text-align: center;
+    }
+
+    #logo{
+        padding: 2rem;
+    }
+
+    .cloud{
+        height: 30rem;
+    }
+}
+
+
+/* Benefits */
+
+.locations{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),transparent), url('img/new-york-page.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.head-loc{
+    width: 90%;
+    margin: auto;
+}
+
+.head-loc h2{
+    padding-bottom: 3rem;
+}
+
+
+.cloud{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.moving-cloud-1{
+    
+    animation: cloudAnimation 5s infinite alternate ease-in-out;
+}
+.moving-cloud-2{
+    top: 15%;
+    z-index: -1;
+    animation: cloudAnimation 8s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation{
+    0%{
+        transform: translate(10%,-5%);
+    }
+    100%{
+        transform: translate(0%,0%);
+    }
+}
+
+
+.head-bene{
+    background-color: rgb(0, 54, 90);
+    padding: 3rem;
+    min-height: 30vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.head-bene h3{
+    padding: 1rem;
+}
+
+.cards{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    text-align: center;
+    flex: 1 1 25rem;
+    min-height: 40vh;
+    margin: 1rem 3rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.103),0px 20px 20px rgba(0, 0, 0, 0.103);
+}
+
+.card h4, p{
+    margin-top: 1em;
+}
+
+.cards img{
+    height: 100px;
+    max-width: 15%;
+    margin: 2rem;
+}
+
+.card-img{
+    background-color: rgb(63, 145, 238);
+    text-align: center;
+}
+
+
+.contact{
+    min-height: 100vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.253),transparent), url('img/contact-mountain.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-wrapper{
+    background: rgba(0, 24, 61, 0.74);
+    width: 60%;
+    color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.head-form{
+    text-align: center;
+    padding: 4rem;
+}
+.name-form,
+.email-form{
+    padding: 3rem;
+    text-align: center;
+}
+
+.form-wrapper label{
+    margin: 0rem 3rem;
+}
+
+.form-wrapper button{
+    width: 100%;
+    padding: 2rem;
+    margin-top: 8rem;
+    
+}
+
+.form-wrapper input{
+    padding: 1rem 3rem;
+}
